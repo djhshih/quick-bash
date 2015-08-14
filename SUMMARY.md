@@ -8,5 +8,5 @@
 * [Chapter 5](ch05.md) Tying Loose Ends
 * [Appendix 1](ap01.md) Standard Linux Tools
 * [Appendix 2](ap02.md) Not All Shells Are Created Equal
-# [Appendix 3](ap03.md) More? Yes, Please!
+* [Appendix 3](ap03.md) More? Yes, Please!
 
