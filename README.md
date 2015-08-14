@@ -9,7 +9,7 @@ tasks in a Linux environment. *Bash is certainly worth learning*.
 To illustrate the utility of Bash, imagine that you are asked to
 write
 
-> A program that deads a text file and prints a table of unique words and
+> A program that reads a text file and prints a table of unique words and
 > corresponding frequencies, sorted from most to least frequent.
 
 In 1986, Donald Knuth, the Father of the analysis of computer algorithms, was
