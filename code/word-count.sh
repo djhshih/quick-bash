@@ -1,5 +1,5 @@
 #!/bin/bash
-# Read from stdin and procude a sorted word frequency table
+# Read from stdin and produce a sorted word frequency table
 
 set -o errexit nounset pipefail
 
