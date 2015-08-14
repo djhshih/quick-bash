@@ -7,12 +7,10 @@ Bash remains relevant today for managing system programs and automating small
 tasks in a Linux environment. *Bash is certainly worth learning*.
 
 To illustrate the utility of Bash, imagine that you are asked to
-write a program that
+write
 
-```
-reads a text file and prints a table of unique words and corresponding
-frequencies, sorted from most to least frequent
-```
+> A program that deads a text file and prints a table of unique words and
+> corresponding frequencies, sorted from most to least frequent.
 
 In 1986, Donald Knuth, the Father of the analysis of computer algorithms, was
 asked to write such a program. He produced a solution in Pascal that was 10
