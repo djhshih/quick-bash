@@ -32,8 +32,8 @@ produce the desired output. Bash breaks down a complex task into smaller jobs
 that it delegates to specialized Linux programs.
 
 Indeed, Bash excels in work flow management. While Bash is a poor choice for
-writing complicated, error-proof, performance-critical applications, it is a
-widely used language for managing programs in the Linux environment.  With this
-guide, you will learn to write simple and comprehensible Bash scripts, allowing
-you to achieve the full potential of Linux.
+writing fault-tolerant, memory-intensive, performance-critical applications,
+it is a widely used language for managing programs in the Linux environment.
+With this guide, you will learn to write simple and comprehensible Bash
+scripts, allowing you to achieve the full potential of Linux.
 
