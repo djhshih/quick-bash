@@ -8,7 +8,7 @@ use autodie;
 
 my %word_counts;
 
-# read text from stdin or given file
+# process text from stdin or given file
 while (<>) {
 	# remove trailing new line, operating on $_
 	chomp;

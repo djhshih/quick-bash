@@ -6,7 +6,7 @@ import fileinput
 
 word_counts = {}
 
-# read text from stdin or given file
+# process text from stdin or given file
 for line in fileinput.input():
     # use list comprehension to generate character list
     # join the characters into a string and split on space
@@ -22,9 +22,9 @@ for line in fileinput.input():
             word_counts[word] = 1
 
 # sort words by descending frequency and ascending lexicographical order
-word_sorted = sorted(word_counts, key = lambda x: (-word_counts[x], x))
+words_sorted = sorted(word_counts, key = lambda x: (-word_counts[x], x))
 
 # print word frequency table
-for word in word_sorted:
+for word in words_sorted:
     print('   {} {}'.format(word_counts[word], word))
 
