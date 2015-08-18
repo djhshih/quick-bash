@@ -10,8 +10,8 @@ for line in fileinput.input():
     # use list comprehension to generate character list
     # join the characters into a string and split on space
     words = ''.join(
-        # conver to lowercase; replace any non-alphnumeric character to space
-        c if c.isalnum() else ' ' for c in line.lower()
+        # conver to lowercase; replace any non-alphabetic character to space
+        c if c.isalpha() else ' ' for c in line.lower()
     ).split()
     # count unique words
     for word in words:
