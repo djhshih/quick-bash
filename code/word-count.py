@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # Read from stdin and produce a sorted word frequency table
 
-
 import fileinput
+
 
 word_counts = {}
 
+# read text from stdin or given file
 for line in fileinput.input():
     # use list comprehension to generate character list
     # join the characters into a string and split on space
