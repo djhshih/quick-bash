@@ -19,15 +19,15 @@ void word_count(istream& stream) {
 
 	// process text from input stream
 	while (getline(stream, line)) {
-		// convert to lowercase
-		transform(line.begin(), line.end(), line.begin(), ::tolower);
 
-		// extract words and count them
+		// convert to lowercase, extract words, and count unique words
 		size_t start = 0;
 		size_t line_length = line.length();
 		for (size_t i = 0; i <= line_length; ++i) {
 			// look for word boundary as marked by non-alphabet characters or EOL
 			if (!isalpha(line[i]) || i == line_length) {
+				// met word boundary: extract word
+				// skip empty words
 				if (i > start) {
 					string word = line.substr(start, i - start);
 					if (word_counts.find(word) == word_counts.end()) {
@@ -40,6 +40,9 @@ void word_count(istream& stream) {
 				}
 				// shift to next word
 				start = i+1;
+			} else {
+				// convert all alphabet characters to lowercase
+				line[i] = ::tolower(line[i]);
 			}
 		}
 	}
