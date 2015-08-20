@@ -2,18 +2,16 @@
 # Read from stdin and produce a sorted word frequency table
 
 import fileinput
-
+import re
 
 word_counts = {}
 
 # process text from stdin or given file
 for line in fileinput.input():
-    # use list comprehension to generate character list
-    # join the characters into a string and split on space
-    words = ''.join(
-        # conver to lowercase; replace any non-alphabetic character to space
-        c if c.isalpha() else ' ' for c in line.lower()
-    ).split()
+    # conver alphabet characters to lowercase
+    # and non-alphabet characters to space,
+    # then split into words by space
+    words = re.sub(r'[^A-Za-z]', ' ', line.lower()).split()
     # count unique words
     for word in words:
         if word in word_counts:
