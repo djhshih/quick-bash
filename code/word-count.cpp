@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <cstdio>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ void word_count(istream& stream) {
 		size_t line_length = line.length();
 		for (size_t i = 0; i <= line_length; ++i) {
 			// look for word boundary as marked by non-alphabet characters or EOL
-			if (!isalpha(line[i]) || i == line_length) {
+			if (i == line_length || !isalpha(line[i])) {
 				// met word boundary: extract word
 				// skip empty words
 				if (i > start) {
@@ -40,7 +41,7 @@ void word_count(istream& stream) {
 				}
 				// shift to next word
 				start = i+1;
-			} else {
+			} else if (i < line_length) {
 				// convert all alphabet characters to lowercase
 				line[i] = ::tolower(line[i]);
 			}
@@ -61,7 +62,7 @@ void word_count(istream& stream) {
 
 	// print word frequency table
 	for (auto it = words.begin(); it != words.end(); ++it) {
-		cout << "   " << word_counts[*it] << ' ' << *it << endl;
+		printf("%4lu %s\n", word_counts[*it], it->c_str());
 	}
 }
 
