@@ -31,6 +31,6 @@ my @words_sorted = sort
 
 # print word frequency table
 for my $word (@words_sorted) {
-	printf "   %s %s\n", $word_counts{$word}, $word
+	printf "%4d %s\n", $word_counts{$word}, $word
 }
 

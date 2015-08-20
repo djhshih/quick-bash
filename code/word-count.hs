@@ -1,3 +1,4 @@
+#!/usr/bin/env runhaskell
 -- Read from stdin and produce a sorted word frequency table
 
 import Data.Char
@@ -5,6 +6,7 @@ import Data.List.Split
 import qualified Data.Map as Map
 import Data.List
 import Data.Ord
+import Text.Printf
 
 
 -- Convert convert alphabeta character to lower case
@@ -26,6 +28,6 @@ sortByCount xs = sortBy (flip (comparing $ fst)) xs
 main = do
     text <- getContents
     words <- return $ (getWords . normalizeString) text
-    sequence_ [ putStrLn ("   " ++ show a ++ " " ++ b)
+    sequence_ [ putStrLn (printf "%4u %s" a b)
         | (a, b) <- (sortByCount . count) words ]
 

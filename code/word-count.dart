@@ -1,3 +1,4 @@
+#!/usr/bin/env dart
 // Read from stdin and produce a sorted word frequency table
 
 import 'dart:io';
@@ -53,7 +54,7 @@ void word_count(String s) {
 	// print word frequency table
 	for (var i = 0; i < words_unique.length; ++i) {
 		var x = words_unique[i];
-		print('   ${word_counts[x]} $x');
+		print('${word_counts[x]} $x');
 	}
 
 }

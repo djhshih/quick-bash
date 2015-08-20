@@ -24,5 +24,5 @@ words_sorted = sorted(word_counts, key = lambda x: (-word_counts[x], x))
 
 # print word frequency table
 for word in words_sorted:
-    print('   {} {}'.format(word_counts[word], word))
+    print('{0:>4} {1}'.format(word_counts[word], word))
 
