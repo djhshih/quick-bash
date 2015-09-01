@@ -1,7 +1,9 @@
 #!/bin/bash
 # Read from stdin and produce a sorted word frequency table
 
-set -o errexit nounset pipefail
+set -o errexit
+set -o nounset
+set -o pipefail
 
 
 tr -cs A-Za-z '\n' |    # put each word on its own line
